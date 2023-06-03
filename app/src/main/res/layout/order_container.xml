@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="orderId"
+            type="String" />
+        <variable
+            name="totalPrice"
+            type="String" />
+
+        <variable
+            name="addressName"
+            type="String" />
+
+        <variable
+            name="orderStatus"
+            type="Integer" />
+
+        <variable
+            name="orderItemsAdapter"
+            type="com.aplication.onlinepharmacy.adapters.OrderItemsAdapter" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/marginOf16dp"
+        android:paddingVertical="@dimen/marginOf16dp"
+        android:layout_marginVertical="@dimen/paddingOf8dp"
+        android:background="@drawable/order_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/OrderItemsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adapter="@{orderItemsAdapter}"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/order_item_container"
+            android:orientation="horizontal" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/paddingOf12dp"
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/OrderItemsRecyclerView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <TextView
+                android:id="@+id/orderIdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_id"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                android:layout_alignParentLeft="true"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="168dp" />
+
+
+            <TextView
+                android:id="@+id/orderIdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@{`#`+orderId}"
+                android:textAllCaps="true"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="168dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/paddingOf12dp"
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <TextView
+                android:id="@+id/totalPRiceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/total_price"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="168dp" />
+
+
+            <TextView
+                android:id="@+id/totalPriceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:text="@{totalPrice+` Da`}"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="168dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/paddingOf12dp"
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <TextView
+                android:id="@+id/AddressLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Address"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="168dp" />
+
+
+            <TextView
+                android:id="@+id/addresNameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:text="@{addressName}"
+                android:textColor="@color/textColor"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="168dp" />
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/trackOrderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginOf16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout2">
+
+            <ImageView
+                android:id="@+id/orderPlacedImagePoint"
+                android:layout_width="12dp"
+                android:layout_marginLeft="@dimen/trackOrderMargin"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                android:layout_height="12dp"
+                android:src="@drawable/greencirle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/orderShippedImagePoint"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".1" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginHorizontal="@dimen/paddingOf8dp"
+                android:background="@drawable/green_line"
+                app:layout_constraintBottom_toBottomOf="@+id/orderPlacedImagePoint"
+                app:layout_constraintEnd_toStartOf="@+id/orderShippedImagePoint"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/orderPlacedImagePoint"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/orderShippedImagePoint"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/orangecirle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@id/orderPlacedImagePoint"
+                app:layout_constraintRight_toLeftOf="@id/orderOnTheWayImagePoint"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".1" />
+
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginHorizontal="@dimen/paddingOf8dp"
+                android:background="@drawable/grey_line"
+                app:layout_constraintBottom_toBottomOf="@id/orderShippedImagePoint"
+                app:layout_constraintLeft_toRightOf="@id/orderShippedImagePoint"
+                app:layout_constraintRight_toLeftOf="@id/orderOnTheWayImagePoint"
+                app:layout_constraintTop_toTopOf="@id/orderShippedImagePoint" />
+
+
+            <ImageView
+                android:id="@+id/orderOnTheWayImagePoint"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/grey_cirle"
+
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@id/orderShippedImagePoint"
+                app:layout_constraintRight_toLeftOf="@id/orderDoneImagePoint"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".1" />
+
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+
+                android:layout_marginHorizontal="@dimen/paddingOf8dp"
+                android:background="@drawable/grey_line"
+                app:layout_constraintBottom_toBottomOf="@id/orderShippedImagePoint"
+                app:layout_constraintLeft_toRightOf="@id/orderOnTheWayImagePoint"
+                app:layout_constraintRight_toLeftOf="@id/orderDoneImagePoint"
+                app:layout_constraintTop_toTopOf="@id/orderShippedImagePoint" />
+
+
+            <ImageView
+                android:id="@+id/orderDoneImagePoint"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="@dimen/trackOrderMargin"
+                android:src="@drawable/grey_cirle"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toRightOf="@id/orderOnTheWayImagePoint"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".1" />
+
+            <!--      end with chains-->
+
+
+            <ImageView
+                android:id="@+id/orderPlacedImageIcon"
+                android:layout_width="@dimen/track_order_icon_size"
+                android:layout_height="@dimen/track_order_icon_size"
+                android:layout_marginTop="@dimen/paddingOf8dp"
+                android:src="@drawable/ic_orderplace"
+                app:layout_constraintLeft_toLeftOf="@id/orderPlacedImagePoint"
+                app:layout_constraintRight_toRightOf="@id/orderPlacedImagePoint"
+                app:layout_constraintTop_toBottomOf="@id/orderPlacedImagePoint" />
+
+
+            <ImageView
+                android:id="@+id/orderShippedImageIcon"
+                android:layout_width="@dimen/track_order_icon_size"
+                android:layout_height="@dimen/track_order_icon_size"
+                android:layout_marginTop="@dimen/paddingOf8dp"
+                android:src="@drawable/ic_ordershipped"
+                app:layout_constraintLeft_toLeftOf="@id/orderShippedImagePoint"
+                app:layout_constraintRight_toRightOf="@id/orderShippedImagePoint"
+                app:layout_constraintTop_toBottomOf="@id/orderPlacedImagePoint" />
+
+
+            <ImageView
+                android:id="@+id/orderOnTheWayImageIcon"
+                android:layout_width="@dimen/track_order_icon_size"
+                android:layout_height="@dimen/track_order_icon_size"
+                android:layout_marginTop="@dimen/paddingOf8dp"
+                android:src="@drawable/ic_orderontheway"
+                app:layout_constraintLeft_toLeftOf="@id/orderOnTheWayImagePoint"
+                app:layout_constraintRight_toRightOf="@id/orderOnTheWayImagePoint"
+                app:layout_constraintTop_toBottomOf="@id/orderPlacedImagePoint" />
+
+
+            <ImageView
+                android:id="@+id/orderDoneImageIcon"
+                android:layout_width="@dimen/track_order_icon_size"
+                android:layout_height="@dimen/track_order_icon_size"
+                android:layout_marginTop="@dimen/paddingOf8dp"
+                android:src="@drawable/ic_orderdone"
+                app:layout_constraintLeft_toLeftOf="@id/orderDoneImagePoint"
+                app:layout_constraintRight_toRightOf="@id/orderDoneImagePoint"
+                app:layout_constraintTop_toBottomOf="@id/orderPlacedImagePoint" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/PlaceOrderBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/order_done"
+            android:background="@drawable/order_done_btn_background"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="17sp"
+            android:shadowRadius="0"
+            android:shadowDy="0"
+            android:shadowDx="0"
+            app:layout_constraintTop_toBottomOf="@id/trackOrderLayout"
+            android:layout_marginBottom="@dimen/paddingOf8dp"
+            android:textStyle="bold"
+
+            android:paddingHorizontal="@dimen/marginOf16dp"
+            android:textAllCaps="false"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/raleway_medium_for_number"
+            android:gravity="center" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="CategoriesAdapter"
+            type="com.aplication.onlinepharmacy.adapters.CategoriesAdapter" />
+        <variable
+            name="productsAdapter"
+            type="com.aplication.onlinepharmacy.adapters.ProductsAdapter" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="32dp"
+        android:background="@android:color/transparent"
+        tools:context=".views.fragments.HomeFragment">
+
+        <TextView
+            android:paddingHorizontal="@dimen/marginOf16dp"
+
+            android:id="@+id/OnLinePharmacyTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/online_n_pharmacy"
+            android:textColor="@color/secondaryCOLOR"
+            android:textStyle="bold"
+            android:textSize="@dimen/OnlinePharmacyTxtViewFontSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/searchDrugsEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/marginOf16dp"
+            android:background="@drawable/search_drugs_edit_text_background"
+            android:drawableStart="@drawable/search_icon_selector"
+            android:drawablePadding="@dimen/paddingOf8dp"
+            android:hint="@string/search_drugs_etc"
+            android:paddingVertical="12dp"
+            android:paddingLeft="@dimen/paddingOf12dp"
+            android:textColor="@color/black"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/imageButton"
+            app:layout_constraintTop_toBottomOf="@id/OnLinePharmacyTxtView" />
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/filter_button_image_background"
+            android:scaleType="fitXY"
+            android:layout_marginRight="@dimen/marginOf16dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_filter"
+            app:layout_constraintBottom_toBottomOf="@id/searchDrugsEditText"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/searchDrugsEditText" />
+
+
+        <TextView
+            android:id="@+id/textVIewShopByCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/margin_betweem_elements_in_homeScreen"
+            android:text="@string/shop_by_category"
+            android:textColor="@color/textColor"
+            android:textSize="16dp"
+            android:layout_marginHorizontal="@dimen/marginOf16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchDrugsEditText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginOf16dp"
+            android:paddingHorizontal="@dimen/paddingOf8dp"
+            android:clipToPadding="false"
+            android:adapter="@{CategoriesAdapter}"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textVIewShopByCategory"
+            tools:listitem="@layout/category_item_container" />
+
+
+        <TextView
+            android:id="@+id/popularProducts_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/margin_betweem_elements_in_homeScreen"
+            android:text="@string/all_products"
+            android:textColor="@color/textColor"
+            android:textSize="16dp"
+            android:layout_marginHorizontal="@dimen/marginOf16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categories_recycler_view" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/products_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginOf16dp"
+            android:adapter="@{productsAdapter}"
+            android:clipToPadding="false"
+            android:paddingHorizontal="4dp"
+            android:orientation="horizontal"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popularProducts_text_view"
+            tools:listitem="@layout/product_item_container"
+
+            android:layout_marginBottom="32dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

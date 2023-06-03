@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="OnlinePharmacyTxtViewFontSize">48sp</dimen>
+    <dimen name="marginOf16dp">16dp</dimen>
+    <dimen name="paddingOf8dp">8dp</dimen>
+    <dimen name="filter_icon_size">48dp</dimen>
+    <dimen name="paddingOf12dp">12dp</dimen>
+    <dimen name="imageViewItemContainerSize">64dp</dimen>
+    <dimen name="backBtnSize">24dp</dimen>
+    <dimen name="margin_betweem_elements_in_homeScreen">24dp</dimen>
+    <dimen name="add_minus_btn_size">24dp</dimen>
+    <dimen name="top_corner_raduis_bottom_navigation_bar_background">20dp</dimen>
+    <dimen name="start_drawable_icon_size">20dp</dimen>
+    <dimen name="item_cart_margin">12dp</dimen>
+    <dimen name="track_order_icon_size">40dp</dimen>
+    <dimen name="trackOrderMargin">16dp</dimen>
+    <dimen name="Lock_IconSize">24dp</dimen>
+    <dimen name="emailIconSizer">20dp</dimen>
+    <dimen name="product_details_margin">8dp</dimen>
+</resources>

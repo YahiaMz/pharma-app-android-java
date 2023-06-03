@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/addToCartFromScreenDetails_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/add_from_home_image_background.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/add_from_search_image_background.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/add_new_address_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/add_new_address_with_force_background.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/add_to_cart_from_screen_details_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/address_item_background_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/address_item_selected_background.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/bottom_navigation_background.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/cart_item_contrainer_background.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/cart_item_image_background.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/cart_item_image_bg.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/categery_item_click_ripple_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/category_item_stroke_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/dash_line_of_1dp.xml" value="0.2275" />
+        <entry key="app/src/main/res/drawable/email_icon_selector.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/email_password_layout_background.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/filter_button_image_background.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/green_line.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/greencirle.xml" value="0.343" />
+        <entry key="app/src/main/res/drawable/grey_cirle.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/grey_line.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/ic_add_address_icon.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_add_ws.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_add_ws_white.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_back_18.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/ic_blob_haikei.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/ic_cart.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/ic_cart_white.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_checkout.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_email_enabled.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_filter.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/ic_heart_liked_white.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/ic_heart_red.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_heartsmoth.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_lock.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_lock_enabled.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/ic_minus_rounded.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_order_27.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/ic_orders.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_phone_foucsed.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_phone_non_foucsed.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/ic_search_583_foucesed.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/ic_search_583_non_foucesed.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/item_category_image_view_background.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/item_product_container_background.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/liked_item_product_container_background.xml" value="0.26" />
+        <entry key="app/src/main/res/drawable/lock_icon_selector.xml" value="0.176" />
+        <entry key="app/src/main/res/drawable/login_edit_text_background.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/non_selected_address_background.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/orangecirle.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/order_background.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/order_done_btn_background.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/order_item_container_background.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/pharmacy_app_icon.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/phone_icon_selector.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/product_detailsScreen_info_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/product_details_info_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/product_details_screen_info_background.xml" value="0.312" />
+        <entry key="app/src/main/res/drawable/search_drugs_edit_text_background.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/search_icon_selector.xml" value="0.344" />
+        <entry key="app/src/main/res/drawable/search_icon_selectro.xml" value="0.3335" />
+        <entry key="app/src/main/res/drawable/selected_address_background.xml" value="0.2285" />
+        <entry key="app/src/main/res/drawable/signup_btn_background.xml" value="0.343" />
+        <entry key="app/src/main/res/drawable/wrong_phonenumber_background.xml" value="0.2285" />
+        <entry key="app/src/main/res/layout/activity_category_product_list.xml" value="0.28076923076923077" />
+        <entry key="app/src/main/res/layout/activity_check_out.xml" value="0.22805139186295503" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.28076923076923077" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28076923076923077" />
+        <entry key="app/src/main/res/layout/activity_order_palced_with_success.xml" value="0.1371794871794872" />
+        <entry key="app/src/main/res/layout/activity_product_detaills.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.3421875" />
+        <entry key="app/src/main/res/layout/add_new_address_dialog.xml" value="0.6526315789473685" />
+        <entry key="app/src/main/res/layout/address_item_container.xml" value="0.2799145299145299" />
+        <entry key="app/src/main/res/layout/cart_item_container.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/category_item_container.xml" value="0.3421875" />
+        <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.28076923076923077" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24259259259259258" />
+        <entry key="app/src/main/res/layout/fragment_likes.xml" value="0.28076923076923077" />
+        <entry key="app/src/main/res/layout/fragment_my_orders.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/liked_product_item_container.xml" value="0.28076923076923077" />
+        <entry key="app/src/main/res/layout/order_container.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/order_item_container.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/order_item_contrainer.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/product_item_container.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/search_result_item_container.xml" value="0.33" />
+        <entry key="app/src/main/res/menu/bottom_navigation_bar_menu.xml" value="0.28076923076923077" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

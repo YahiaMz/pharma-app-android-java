@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/marginOf16dp"
+    android:paddingVertical="32dp"
+    android:background="@drawable/email_password_layout_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ImageView
+        android:id="@+id/newAddressImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_newaddres"
+        />
+
+    <EditText
+
+        android:id="@+id/addresNameDilog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_address_name"
+        app:layout_constraintTop_toBottomOf="@id/newAddressImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/login_edit_text_background"
+        android:paddingHorizontal="@dimen/marginOf16dp"
+        />
+
+
+
+    <EditText
+        android:id="@+id/addressValueDialog"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_address_value"
+        app:layout_constraintTop_toBottomOf="@id/addresNameDilog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/login_edit_text_background"
+        android:paddingHorizontal="@dimen/marginOf16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

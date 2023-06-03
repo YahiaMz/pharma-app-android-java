@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+   <variable
+       name="categoryName"
+       type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/categoryItemContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/categery_item_click_ripple_background"
+        android:padding="4dp">
+
+
+        <com.caverock.androidsvg.SVGImageView
+            android:id="@+id/category_Item_container_image"
+            android:layout_width="@dimen/imageViewItemContainerSize"
+            android:layout_height="@dimen/imageViewItemContainerSize"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            android:padding="16dp"
+            android:background="@drawable/item_category_image_view_background"
+            android:src="@drawable/ic_medicines1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/category_Item_container_image"
+            app:layout_constraintLeft_toLeftOf="@id/category_Item_container_image"
+            app:layout_constraintTop_toBottomOf="@id/category_Item_container_image"
+            android:layout_marginTop="@dimen/paddingOf12dp"
+            android:text="@{categoryName}"
+            android:textSize="13dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

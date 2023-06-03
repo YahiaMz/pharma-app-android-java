@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="cProduct"
+        type="com.aplication.onlinepharmacy.models.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.product_detaills"
+        android:background="@color/tangoGreenColorWith0.3Alpha"
+        android:paddingTop="@dimen/marginOf16dp"
+       >
+
+        <ImageView
+            android:id="@+id/cartInDetailsScreenImageBtn"
+            android:layout_width="@dimen/backBtnSize"
+            android:layout_height="32dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_cart"
+            app:layout_constraintBottom_toBottomOf="@+id/backFromDetailsScreen"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backFromDetailsScreen" />
+
+        <ImageView
+            android:id="@+id/backFromDetailsScreen"
+            android:layout_width="@dimen/backBtnSize"
+            android:layout_height="32dp"
+            android:layout_marginLeft="@dimen/marginOf16dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_back_18" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/productImageInScreenDetails"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_paracetamol"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="8dp"
+
+            app:layout_constraintDimensionRatio="4:2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backFromDetailsScreen" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/product_details_margin"
+            android:layout_marginTop="@dimen/paddingOf8dp"
+            android:background="@drawable/product_details_info_background"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="32dp"
+            android:layout_marginHorizontal="@dimen/product_details_margin"
+            android:paddingBottom="@dimen/marginOf16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productImageInScreenDetails">
+
+            <TextView
+                android:id="@+id/productNameTextViewDetailsScreen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:text="@{cProduct.name}"
+                android:textColor="@color/textColor"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/productNameTextViewDetailsScreen">
+
+                <ImageView
+                    android:id="@+id/increaseQuantityInDetailsScreen"
+                    android:layout_width="@dimen/add_minus_btn_size"
+                    android:layout_height="@dimen/add_minus_btn_size"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_add" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/paddingOf8dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="01"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/decreaseQuantityInDetailsScreen"
+                    android:layout_width="@dimen/add_minus_btn_size"
+                    android:layout_height="@dimen/add_minus_btn_size"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_minus_rounded" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/pills"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/paddingOf8dp"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:text="90 pills"
+                android:textColor="@color/textColor"
+                app:layout_constraintLeft_toLeftOf="@id/productNameTextViewDetailsScreen"
+                app:layout_constraintRight_toRightOf="@id/productNameTextViewDetailsScreen"
+                app:layout_constraintTop_toBottomOf="@id/productNameTextViewDetailsScreen" />
+
+
+            <RatingBar
+
+                android:id="@+id/ratingBar"
+
+                android:layout_width="0dp"
+                android:layout_marginRight="@dimen/marginOf16dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/paddingOf8dp"
+                android:rating="4"
+                android:stepSize="1"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/ratingValueTextView"
+                app:layout_constraintRight_toLeftOf="@id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/productNameTextViewDetailsScreen"
+                app:layout_constraintTop_toBottomOf="@id/pills" />
+
+
+            <TextView
+                android:id="@+id/ratingValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:text="4.0"
+                android:layout_marginRight="32dp"
+                android:paddingLeft="@dimen/paddingOf8dp"
+                android:visibility="invisible"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+
+            <TextView
+                android:id="@+id/prodcutDetailsLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginOf16dp"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:text="@string/product_details"
+                android:textColor="@color/textColor"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+            <TextView
+                android:id="@+id/prodcutDetailsTxtView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/marginOf16dp"
+                android:layout_marginBottom="48dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:maxLines="8"
+                android:paddingVertical="4dp"
+                android:text="@{cProduct.description}"
+                android:textColor="@color/textColor"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toTopOf="@+id/addToCartBtnFromDetails"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/prodcutDetailsLabel" />
+
+
+            <Button
+                android:id="@+id/addToCartBtnFromDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginOf16dp"
+                android:background="@drawable/add_to_cart_from_screen_details_background"
+                android:drawableStart="@drawable/ic_cart_white"
+                android:fontFamily="@font/pluto_regular"
+                android:paddingHorizontal="24dp"
+                android:shadowColor="@color/tangoGreenColor"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="15"
+                android:text="Add To Cart"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/likeBtnFromScreenDetails"
+                app:layout_constraintLeft_toRightOf="@id/likeBtnFromScreenDetails"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageButton
+                android:id="@+id/likeBtnFromScreenDetails"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/filter_button_image_background"
+                android:backgroundTint="@color/secondaryCOLOR"
+                android:padding="@dimen/paddingOf12dp"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="@id/addToCartBtnFromDetails"
+                android:src="@{cProduct.like ?@drawable/ic_heart_liked_white : @drawable/ic_heart_red }"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

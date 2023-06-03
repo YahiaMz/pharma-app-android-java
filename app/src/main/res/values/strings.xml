@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">OnlinePharmacy</string>
+    <string name="online_n_pharmacy">Online\nPharmacy!</string>
+    <string name="search_drugs_etc">search for drugs , etc .....</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shop_by_category">Shop by category</string>
+    <string name="popular_products_text">Popular products</string>
+    <string name="paracetamolText">Paracetamol</string>
+    <string name="product_details">Product Details</string>
+    <string name="loremIspumText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</string>
+    <string name="home">home</string>
+    <string name="cart">cart</string>
+    <string name="favorite">favorite</string>
+    <string name="orders">orders</string>
+    <string name="all_products">all products</string>
+    <string name="checkout">Checkout</string>
+    <string name="deliver_to">Deliver to</string>
+    <string name="phone_number_text">Phone number</string>
+    <string name="place_order">Place order</string>
+    <string name="sub_total_text">Sub total</string>
+    <string name="shicppingtext">Shipping</string>
+    <string name="totaltext">Total</string>
+    <string name="payement_method">Payement method</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="order_id">Order ID</string>
+    <string name="total_price">Total Price</string>
+    <string name="order_done">Order received</string>
+    <string name="order_successful">Order successful</string>
+    <string name="sharedP_file_key">user_data</string>
+    <string name="remember_me">Remember me</string>
+    <string name="enter_address_name">Enter address name</string>
+    <string name="enter_address_value">Enter address value</string>
+    <string name="no_order">No order</string>
+</resources>

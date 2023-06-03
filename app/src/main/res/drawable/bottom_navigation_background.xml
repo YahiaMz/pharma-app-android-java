@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+<corners android:topRightRadius="@dimen/top_corner_raduis_bottom_navigation_bar_background"
+         android:topLeftRadius="@dimen/top_corner_raduis_bottom_navigation_bar_background"
+         android:bottomLeftRadius="@dimen/top_corner_raduis_bottom_navigation_bar_background"
+         android:bottomRightRadius="@dimen/top_corner_raduis_bottom_navigation_bar_background"
+    />
+
+    <solid android:color="@color/tangoGreenColor"/>
+</shape>

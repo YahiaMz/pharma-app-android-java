@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+        name="isThereAnyLikeItem"
+        type="Boolean" />
+
+        <variable
+            name="likesAdapter"
+            type="com.aplication.onlinepharmacy.adapters.LikeAdapter" />
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="@dimen/marginOf16dp"
+        android:layout_height="match_parent"
+        tools:context=".views.fragments.LikesFragment">
+
+
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:visibility="@{isThereAnyLikeItem ? View.GONE : View.VISIBLE   , default = gone }"
+            android:src="@drawable/ic_emptybox"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="@{isThereAnyLikeItem ? View.VISIBLE : View.GONE , default = visible }"
+            android:id="@+id/likesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adapter="@{likesAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:spanCount="2"
+            android:orientation="vertical"
+            tools:listitem="@layout/liked_product_item_container"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

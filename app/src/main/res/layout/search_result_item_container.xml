@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+       <variable
+           name="product"
+           type="com.aplication.onlinepharmacy.models.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="100:38"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/item_product_container_background">
+
+            <ImageView
+                android:id="@+id/likeSearchProductImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/paddingOf8dp"
+                android:src="@drawable/ic_heartsmoth"
+                app:layout_constraintEnd_toEndOf="@+id/inc_or_decrease_linear_layout_contrainer"
+                app:layout_constraintStart_toStartOf="@+id/inc_or_decrease_linear_layout_contrainer"
+                app:layout_constraintTop_toTopOf="@+id/searchProductImage" />
+
+
+            <ImageView
+                android:src="@drawable/ic_paracetamol"
+                android:scaleType="fitXY"
+                android:padding="@dimen/paddingOf8dp"
+                android:id="@+id/searchProductImage"
+                android:layout_marginVertical="@dimen/paddingOf8dp"
+                android:layout_marginLeft="@dimen/paddingOf12dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="2:2" />
+
+
+            <TextView
+                android:id="@+id/search_productName"
+                android:layout_width="0dp"
+                android:maxLines="2"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/paddingOf8dp"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:paddingRight="8dp"
+                android:text="@{product.name}"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/marginOf16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/likeSearchProductImage"
+                app:layout_constraintLeft_toRightOf="@id/searchProductImage"
+                app:layout_constraintRight_toLeftOf="@id/likeSearchProductImage"
+                app:layout_constraintTop_toTopOf="@+id/likeSearchProductImage" />
+
+
+            <TextView
+                android:id="@+id/search_productPills"
+                android:layout_width="0dp"
+                android:paddingRight="8dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/paddingOf8dp"
+                app:layout_constraintLeft_toRightOf="@id/searchProductImage"
+                app:layout_constraintRight_toLeftOf="@id/likeSearchProductImage"
+                app:layout_constraintTop_toBottomOf="@id/search_productName"
+                android:layout_marginTop="8dp"
+                android:text="90 pills"
+                android:textColor="@color/textColor"
+                android:textStyle="normal"
+                android:textSize="@dimen/marginOf16dp"
+                android:fontFamily="@font/raleway_medium_for_number" />
+
+
+            <TextView
+                android:id="@+id/search_productPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/paddingOf8dp"
+                android:fontFamily="@font/raleway_medium_for_number"
+                android:paddingRight="8dp"
+                android:text="@{Integer.toString( product.price ) + ` Da`}"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/marginOf16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/inc_or_decrease_linear_layout_contrainer"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@id/searchProductImage"
+                app:layout_constraintRight_toLeftOf="@id/inc_or_decrease_linear_layout_contrainer"
+                app:layout_constraintTop_toTopOf="@+id/inc_or_decrease_linear_layout_contrainer" />
+
+
+            <ImageView
+                android:id="@+id/inc_or_decrease_linear_layout_contrainer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/add_from_search_image_background"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/marginOf16dp"
+                android:layout_marginRight="@dimen/marginOf16dp"
+                android:src="@drawable/ic_add_ws_white"
+
+                android:padding="14dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

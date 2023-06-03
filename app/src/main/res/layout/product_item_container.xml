@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="cProduct"
+        type="com.aplication.onlinepharmacy.models.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/productConstraintLayout"
+        android:layout_width="180dp"
+        android:layout_margin="5dp"
+        android:paddingTop="@dimen/marginOf16dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="4dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/item_product_container_background">
+
+        <ImageView
+            android:id="@+id/likeProductImage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/paddingOf8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@{cProduct.like ?   @drawable/ic_heart_liked : @drawable/ic_heartsmoth }"
+            />
+
+        <ImageView
+            android:id="@+id/productImageOfProductContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="4dp"
+            android:layout_marginLeft="@dimen/paddingOf8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_paracetamol"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/likeProductImage"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <TextView
+            android:id="@+id/productNameTextViewDetailsScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/raleway_medium_for_number"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/marginOf16dp"
+            android:text="@{cProduct.name}"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/marginOf16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/productImageOfProductContainer" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/pills"
+            app:layout_constraintTop_toBottomOf="@id/productNameTextViewDetailsScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/productNameTextViewDetailsScreen"
+            app:layout_constraintRight_toRightOf="@id/productNameTextViewDetailsScreen"
+            android:text="90 pills"
+            android:fontFamily="@font/raleway_medium_for_number"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="@dimen/paddingOf8dp"
+            android:paddingLeft="@dimen/marginOf16dp" />
+
+        <TextView
+            android:id="@+id/prodcutPrice"
+            android:layout_marginTop="@dimen/paddingOf8dp"
+            app:layout_constraintTop_toBottomOf="@id/pills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/productNameTextViewDetailsScreen"
+            app:layout_constraintRight_toRightOf="@id/productNameTextViewDetailsScreen"
+            android:text="@{Integer.toString( cProduct.price ) + ` Da`}"
+            android:fontFamily="@font/raleway_medium_for_number"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/marginOf16dp" />
+
+
+        <ImageView
+            android:id="@+id/addOneToCart"
+            android:layout_width="32dp"
+            android:layout_height="30dp"
+            android:padding="8dp"
+            android:background="@drawable/add_from_home_image_background"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/paddingOf8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prodcutPrice"
+
+            android:src="@drawable/ic_add_ws_white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

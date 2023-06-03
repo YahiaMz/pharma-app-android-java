@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item  android:id="@+id/bottom_navigation_bar_home" android:title="@string/home" android:icon="@drawable/ic_home"   />
+    <item  android:id="@+id/bottom_navigation_bar_cart" android:title="@string/cart" android:icon="@drawable/ic_cart" />
+    <item  android:id="@+id/bottom_navigation_bar_favorite" android:title="@string/favorite" android:icon="@drawable/ic_heartsmoth"   />
+    <item  android:id="@+id/bottom_navigation_bar_orders" android:title="@string/orders" android:icon="@drawable/ic_orders"   />
+
+</menu>
